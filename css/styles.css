@@ -6,15 +6,17 @@ h2 {
     margin: 0;
 }
 
-.index_main_box {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 20px;
+p {
+    margin: 0;
 }
 
-.logo {
+body {
+    font-size: 20px;
+    text-align: center;
+}
+
+.index_main_box {
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -23,34 +25,65 @@ h2 {
     width: 100%;
 }
 
+
+/*Navigation*/
+
+.main_nav {
+    background-color: #ca3614;
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: -3px 3px 8px black;
+    border-radius: 3px;
+}
+
 .main_nav ul {
-    display: flex;
-    flex-direction: column;
     padding: 0;
-    margin-top: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 @media(min-width:480px) {
+    .main_nav {
+        border-radius: 0;
+        box-shadow: none;
+        box-shadow: 0px 2px 5px black;
+        width: 100%;
+    }
     .main_nav ul {
+        padding: 10px;
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
 }
 
-.main_nav ul li {
+.list {
     list-style: none;
-    margin: 5px;
 }
 
-.main_nav ul li a {
+.list a {
     text-decoration: none;
-    color: black;
+    color: white;
+    font-weight: bold;
+    text-shadow: -2px 2px 1px black;
+}
+
+@media(min-width:480px) {
+    .list a {
+        margin-left: 8px;
+        color: black;
+        text-shadow: none;
+    }
+    .list a:hover {
+        color: #ffff;
+        text-shadow: -2px 2px 1px black;
+    }
 }
 
 .main_info {
     width: 50%;
     margin: 0 auto;
+    margin-top: 30px;
     border: 2px dashed black;
     border-radius: 2px;
 }
@@ -73,49 +106,50 @@ h2 {
     }
 }
 
-.img_mid_size {
-    max-width: 355px;
-    width: 99%;
-    height: 250px;
-    margin: 0 auto;
-    border-radius: 2px;
+
+/*Footer*/
+
+#footer {
+    width: 100%;
+    background-color: #ca3614;
+    color: white;
+    bottom: 0;
+    margin-top: 50px;
 }
 
-.tech_card {
-    max-width: 400px;
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 1px;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
+@media(min-width:480px) {
+    #footer {
+        position: fixed;
+        color: black;
+    }
+    #footer_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-.tech_card:hover {
-    box-shadow: 1px 1px 3px black;
-    text-shadow: -2px 1px 3px #ccc;
+#sec_nav {
+    display: none;
 }
 
-.tech_img {
-    max-width: 100%;
-    margin: 0 auto;
+@media(min-width:480px) {
+    #sec_nav {
+        display: inline;
+        text-align: center;
+    }
 }
 
-.tech_name {
-    height: 100%;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 2px;
+#dev_info {
+    font-size: 15px;
+    text-shadow: -1px 1px 1px black;
 }
 
-.tech_title {
-    font-size: 45px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.tech_info {
-    font-size: 22px;
-    letter-spacing: 1px;
+@media(min-width:480px) {
+    #dev_info {
+        text-shadow: none;
+        font-weight: bold;
+        margin-top: 80px;
+        margin-left: 20px;
+        font-size: inherit;
+    }
 }
