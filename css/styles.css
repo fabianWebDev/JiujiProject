@@ -34,6 +34,10 @@ body {
     margin: 0 auto;
     box-shadow: -3px 3px 8px black;
     border-radius: 3px;
+    background-image: url(/img/waves_img.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .main_nav ul {
@@ -70,12 +74,11 @@ body {
 @media(min-width:480px) {
     .list a {
         margin-left: 8px;
-        color: black;
-        text-shadow: none;
     }
     .list a:hover {
-        color: #ffff;
-        text-shadow: -2px 2px 1px black;
+        color: black!important;
+        text-shadow: none;
+        text-decoration: underline;
     }
 }
 
@@ -112,11 +115,16 @@ body {
     color: white;
     bottom: 0;
     margin-top: 50px;
+    background-image: url(/img/waves_img.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media(min-width:480px) {
     #footer {
         color: black;
+        background-position: 0px -80px;
     }
     #footer_grid {
         display: grid;
@@ -124,8 +132,31 @@ body {
     }
 }
 
+@media(min-width:768px) {
+    #footer {
+        background-position: 0px -260px;
+    }
+}
+
+@media(min-width:1200px) {
+    #footer {
+        background-position: 0px -500px;
+    }
+}
+
+@media(min-width:1400px) {
+    #footer {
+        background-position: 0px -650px;
+    }
+}
+
 #sec_nav {
     display: none;
+}
+
+#sec_nav ul li a {
+    color: white!important;
+    text-shadow: -2px 2px 1px black;
 }
 
 @media(min-width:480px) {
@@ -133,18 +164,23 @@ body {
         display: inline;
         text-align: center;
     }
+    #sec_nav ul li a:hover {
+        color: black!important;
+        text-shadow: none;
+        text-decoration: underline;
+    }
 }
 
-#dev_info {
+#dev_info p {
     font-size: 15px;
-    text-shadow: -1px 1px 1px black;
+    text-shadow: -2px 1px 1px black;
 }
 
 @media(min-width:480px) {
     #dev_info {
         color: white;
         text-shadow: none;
-        margin-top: 135px;
+        margin-top: 155px;
         margin-left: 20px;
         font-size: inherit;
     }
